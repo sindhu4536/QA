@@ -1,0 +1,144 @@
+->Jira is a tool developed by Australian company Atlassian.It is used for bug tracking,issue tracking and project management.
+
+->The tool is used to track bugs and issues related to software and mobile apps.
+
+->Why Agile?- Better visibility,better priortization,less down time between tasks,improved teamwork,more predictability.
+
+->Jira schema:
+Inside JIRA , everything can be configured, and it consists of:
+Workflows
+Issue Types
+Custom Fields
+Screens
+Field Configuration
+Notification
+Permissions
+
+->story point is an Agile concept.
+
+->difference between scrum and kanban:There are two different types of Agile work
+
+1.Scrum:Team with target deadlines ,organize your priortized list in batches called sprint.
+
+2.Kanaban:no plan mode so no sprints,support and service teams,work from priortized list as fast as you can.
+
+->Task dependencies in JIRA:we can link the task in Jira.But the Jira doesn't know how the task are related i.e which task is to be executed first.
+
+->we can create a waiting task in JIRA
+
+->If you have things with lots of subtask we can create different epics.
+
+->Jira consist of filters which have things of particular type
+
+->Burndown:We can generate a graph of how the work was done in the sprint and how the work should be done in the sprint.This feature is nothing but generating the reports.
+
+->Issues:we can track the issues of our project.Issues from different project can be linked and referred 
+
+->Workflow :Based on the columns where you can visulize the workflow of your activities and issues.
+
+->Fields:Fields
+• Standard and custom fields
+• We can provide any configuration that makes sense your projects
+
+->workflows:set of statues and transitions that issue goes through during its life cycle.There are standard and custom workflows.
+
+->Jira can send email notifications when significant event occurs.
+
+->It acts as a powerful search engine where we can search for particular task or issue.
+
+->Dashboard:General overview of the status of the project.Spot bottlenecks and problems ahead.Identify project areas that requires more effort.Watch out for high-risk items 
+
+->Regarding structure we have spaces and pages
+
+->we can create content and we can watch contents.
+
+->Issue Types:
+Issue Type displays all types of items that can be created and tracked via JIRA. JIRA Issues are classified under various forms like new feature, sub-task, bug, etc. There are two types of issue type schemes in JIRA:
+1.Default Issue Type Scheme: In default issue type scheme all newly created issues will be added automatically to this scheme
+2.Agile Scrum Issue Type Scheme: Issues and project associated with Agile Scrum will use this scheme
+
+->Components:
+Components are sub-sections of a project; they are used to group issues within a project into smaller parts. Components add some structures to the projects, breaking it up into features, teams, modules, subprojects and more. Using components you can generate reports, collect statistics, and display it on dashboards and so on.
+
+->Screens:
+When issue is created in JIRA, it will be arranged and represented into different fields, this display of field in JIRA is known as a screen. This field can be transitioned and edited through workflow. For each issue, you can assign the screen type as shown in the screen-shot. To add or associate an issue operation with a screen you have to go in main menu and click on Issues then click on Screen Schemes and then click on "Associate an issue operation with a screen" and add the screen according to the requirement.
+
+->Issue attributes:
+Issue Attributes encompasses
+
+Statuses
+Resolutions
+Priorities
+
+Statuses: Different statuses are used to indicate the progress of a project like To do, InProgress, Open, Closed, ReOpened, and Resolved. Likewise, you have resolutions and priorities, in resolution it again tells about the progress of issue like Fixed, Won't fix, Duplicate, Incomplete, Cannot reproduce, Done also you 
+can set the priorities of the issue whether an issue is critical, major, minor, blocker and Trivial.
+
+->In Jira you can clone the issue and link the issue.
+
+->we have Jira scrum and Jira kanban
+
+----------------------------------------------- Interview questions ----------------------------------------
+
+->workflow :Workflow is defined as a movement of the bug/issue through various stages during its life-cycle
+
+Created/Open
+WIP ( Work In Progress)
+Completed/Closed
+
+->what can be referred as issue in JIRA?
+In JIRA, an issue can be anything like a
+
+Software bug
+The project task
+A help-desk ticket
+The leave request form
+
+->List out the source control programs with which it integrates?
+It integrates with source control programs such as CVS, Git, Subversion, Clearcase, Visual SourceSafe, Mercurial, and Perforce.
+
+->Advantages of using Jira:
+Upfront and fair licensing policy
+Features that is not available elsewhere
+Get latest update on the progress of projects
+It run anywhere and recognized with many famous companies
+Easily extensible and customizable
+
+->you can access the JIRA cloud site via the mobile device
+
+->Mention the types of reports generated in JIRA?
+Average Age Report
+Pie Chart Report
+Resolution Time Report
+Recently Created Issues Report
+Resolved vs. Created Issues Report
+Single Level Group by Report
+Time Tracking Report
+User Workload Report
+Workload Pie Chart Report, etc.
+
+->What is cloning an issue?
+Cloning as issue allows you to create a duplicate of the original issue so that many employees can work on a single issue within a single project. The clone issue can be connected to the original issue.  A clone issue holds following the information:
+Summary
+Description
+Assignee
+Environment
+Priority
+Issue Type
+Security
+Reporter
+Components, etc.
+
+->What things are not included in cloned issue in JIRA?
+Time tracking
+Issue history
+Comments
+
+->Using Bulk change option we can modify bulk issues.
+
+->you can share an issue by emailing the issue.
+
+->Three color will be displayed representing the amount of time spent behind the issue
+
+Original Estimate (Blue): The amount of time originally estimated to resolve the issue
+Remaining Estimate(Orange): The remaining amount of time left to resolve the issue
+Time Spen or Logged (Green): The amount of time spent so far while resolving the issue

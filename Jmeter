@@ -1,0 +1,156 @@
+->Jmeter is an open source testing software.It is 100% pure java application for load and performance testing
+
+->Jmeter is designed to cover categories of tests like load,functional,performance,regression etc.
+
+->JMeter is a Java desktop application with a graphical interface that uses the Swing graphical API. It can therefore run on any environment / workstation that accepts a Java virtual machine, for example − Windows, Linux, Mac, etc
+
+->Jmeter features:
+1.Being an open source software, it is freely available.
+2.It has a simple and intuitive GUI.
+3.JMeter can conduct load and performance test for many different server types − Web - HTTP, HTTPS, SOAP, Database via JDBC, LDAP, JMS, Mail - POP3, etc.
+4.It is a platform-independent tool. On Linux/Unix, JMeter can be invoked by clicking on JMeter shell script .On Windows, it can be invoked by starting the jmeter.bat file.
+5.It has full Swing and lightweight component support (precompiled JAR uses packages javax.swing.* ).
+6.JMeter store its test plans in XML format. This means you can generate a test plan using a text editor.
+7.Its full multi-threading framework allows concurrent sampling by many threads and simultaneous sampling of different functions by separate thread groups.
+8.It is highly extensible.
+9.It can also be used to perform automated and functional testing of the applications.
+
+->How Jmeter works:
+Jmeter simulates a group of users sending request to targer servers and returns statistics that show the performance,functionality of the target server application via tables,graphs etc.
+
+->Test plan:
+Test plan can be viewed as a container for running tests.It defines what to test and how to go about it.A complete test plan consists of one or more elements such as thread groups, logic controllers, sample-generating controllers, listeners, timers, assertions, and configuration elements. A test plan must have at least one thread group.
+
+->Jmetre window consist of two nodes:
+1.test plan - where the real test plan is kept.
+2.workbench nodee-It simply provides a place to temporarily store test elements while not in use, for copy/paste purposes. When you save your test plan, Workbench items are not saved with it.
+
+->Add or remove elements: We can add elements by clicking the element from the add list.We can add an element from a file and add it by choosing merge option.
+
+->Jmeter doesn't save elements you need to explicitly save the elements.
+
+->steps involved in Jmeter:
+1. start the Jmeter window.
+2. Add/remove elements
+3. Load and save elements.
+4. Configure the tree elements
+5. Saving the test plan
+6. Run the test plan 
+7.stop the test plan
+
+->Test plan elements:
+
+1.Thread Group:
+Thread Group elements are the beginning points of your test plan. As the name suggests, the thread group elements control the number of threads JMeter will use during the test. We can also control the following via the Thread Group −
+1.Setting the number of threads
+2.Setting the ramp-up time
+3.Setting the number of test iterations
+
+2. Controllers:
+There are two type of controllers samplers and logic.
+Samplers:
+Samplers allow JMeter to send specific types of requests to a server. They simulate a user request for a page from the target server. For example, you can add a HTTP Request sampler if you need to perform a POST, GET, or DELETE on a HTTP service.
+
+Some useful samplers are :HTTP Request,FTP Request,JDBC Request,Java Request,SOAP/XML Request,RPC Requests
+
+Logic controllers: Let you control the order of processing samplers in thread.The following list consists of all the Logic Controllers JMeter provides −Simple Controller,Loop Controller,Once Only Controller,Interleave Controller,Random Controller,Random Order Controller,Throughput Controller,Runtime Controller,If Controller,While Controller,Switch Controller,ForEach Controller,Module Controller,Include Controller,Transaction Controller,Recording Controller
+
+3. Test Fragments:
+A Test Fragment is a special type of element placed at the same level as the Thread Group element. It is distinguished from a Thread Group in that it is not executed unless it is referenced by either a Module Controller or an Include_Controller. This element is purely for code re-use within Test Plans.
+
+4. Listners:
+Listeners let you view the results of Samplers in the form of tables, graphs, trees, or simple text in some log files. They provide visual access to the data gathered by JMeter about the test cases as a Sampler component of JMeter is executed.
+
+Listeners can be added anywhere in the test, including directly under the test plan. They will collect data only from elements at or below their level. The following list consists of all the Listeners JMeter provides −Sample Result Save Configuration,Graph Full Results,Graph Results,Spline Visualizer,Assertion Results,View Results Tree,Aggregate Report,View Results in Table,Simple Data Writer,Monitor Results,Distribution Graph (alpha),Aggregate Graph,Mailer Visualizer,BeanShell Listener,Summary Report
+
+5.Timers:
+By default, a JMeter thread sends requests without pausing between each sampler. This may not be what you want. You can add a timer element which allows you to define a period to wait between each request.
+
+The following list shows all the timers that JMeter provides −Constant Timer,Gaussian Random Timer,Uniform Random Timer,Constant Throughput Timer,Synchronizing Timer,JSR223 Time,BeanShell Time,BSF Time,Poisson Random Time
+
+6.Assertions:
+Assertions allow you to include some validation test on the response of your request made using a Sampler. Using assertions you can prove that your application is returning the correct data. JMeter highlights when an assertion fails.
+
+The following list consists of all the assertions JMeter provides −Beanshell Assertion,BSF Assertion,Compare Assertion,JSR223 Assertion,Response Assertion,Duration Assertion,Size Assertion,XML Assertion,BeanShell Assertion,MD5Hex Assertion,HTML Assertion,XPath Assertion,XML Schema Assertion
+
+7. Configuration Elements:
+Configuration Elements allow you to create defaults and variables to be used by Samplers. They are used to add or modify requests made by Samplers.
+
+They are executed at the start of the scope of which they are part, before any Samplers that are located in the same scope. Therefore, a Configuration Element is accessed only from inside the branch where it is placed.
+
+The following list consists of all the Configuration Elements that JMeter provides −Counter,CSV Data Set Config,FTP Request Defaults,HTTP Authorization Manager,HTTP Cache Manager,HTTP Cookie Manager,HTTP Proxy Server,HTTP Request Defaults,HTTP Header Manager,Java Request Defaults,Keystore Configuration,JDBC Connection Configuration,Login Config Element,LDAP Request DefaultsLDAP Extended Request Defaults,TCP Sampler Config,User Defined Variables,Simple Config Element,Random Variable
+
+8.Pre-Processor Elements:
+A pre-processor element is something that runs just before a sampler executes. They are often used to modify the settings of a Sample Request just before it runs, or to update variables that are not extracted from response text.
+
+The following list consists of all the pre-processor elements that JMeter provides −HTML Link Parser,HTTP URL Re-writing Modifier,HTTP User Parameter Modifier,User Parameters,JDBC PreProcessor,JSR223 PreProcessor,RegEx User Parameters,BeanShell PreProcessor,BSF PreProcessor
+
+9.Post-Processor Elements:
+A post-processor executes after a sampler finishes its execution. This element is most often used to process the response data, for example, to retrieve a particular value for later use.
+
+The following list consists of all the Post-Processor Elements JMeter provides −Regular Expression Extractor,XPath Extractor,Result Status Action Handler,JSR223 PostProcessor,JDBC PostProcessor,BSF PostProcessor,CSS/JQuery Extractor,BeanShell PostProcessor,Debug PostProcessor
+
+->Execution order of test elements:Following is the execution order of the test plan elements −
+
+Configuration elements
+Pre-Processors
+Timers
+Sampler
+Post-Processors (unless SampleResult is null)
+Assertions (unless SampleResult is null)
+Listeners (unless SampleResult is null)
+
+->What is performance testing?- Testing the speed,capacity,cost-saving,stability,accuracy,endurace.
+
+->Need for performance testing?-Impress users,meet user expectations,contractual requirements,comparison with prior release,comparison with competing products or services.
+
+->With Jmeter we can perform Web test plan,Database test plan,FTP test plan,web service test plan,JMS(java messaging service),Monitor test plan.
+
+->we can save the Jmeter listners as .png files.
+
+->Jmeter functions and user variables:
+JMeter functions are special values that can populate fields of any Sampler or other element in a test tree.
+
+->There are two kinds of functions:
+1.user defined functions
+2.Built in functions
+
+->functions and variables can be written into any field of test component.
+
+->Regular expressions are used to search and manipulate text, based on patterns. JMeter interprets forms of regular expressions or patterns being used throughout a JMeter test plan, by including the pattern matching software Apache Jakarta ORO
+
+------------------------------------------------------------- Interview Questions------------------------------------------------
+
+->What is Jmeter?
+JMeter is one of the Java tools which is used to perform load testing client/server applications. Apache JMeter is open source software, a 100% pure Java desktop application designed to load test functional behavior and measure performance of the application. It was originally designed for testing Web Applications but has since expanded to other test functions.
+
+->What is performance testing?
+This test sets the ‘best possible’ performance expectation under a given configuration of infrastructure. It also highlights early in the testing process if changes need to be made before application goes into production.
+
+->What is load test?
+This test is basically used for exercising\discovering the system under the top load it was designed to operate under.
+
+->What is stress test?
+This test is an attempt to break the system by overwhelming its resources.
+
+->Protocols supported by Jmeter?
+The protocols supported by JMeter are:
+
+Web: HTTP, HTTPS sites 'web 1.0' web 2.0 (ajax, flex and flex-ws-amf)
+
+Web Services: SOAP / XML-RPC
+
+Database via JDBC drivers
+
+Directory: LDAP
+
+Messaging Oriented service via JMS
+
+Service: POP3, IMAP, SMTP
+
+FTP Service
+
+->test plans are saved in xml format.so they are independent of OS and can be run any OS.
+
+->
+
